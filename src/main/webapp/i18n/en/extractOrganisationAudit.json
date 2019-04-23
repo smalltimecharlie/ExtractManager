@@ -1,0 +1,25 @@
+{
+    "extractManagerApp": {
+        "extractOrganisationAudit": {
+            "home": {
+                "title": "Extract Organisation Audits",
+                "createLabel": "Create a new Extract Organisation Audit",
+                "createOrEditLabel": "Create or edit a Extract Organisation Audit"
+            },
+            "created": "A new Extract Organisation Audit is created with identifier {{ param }}",
+            "updated": "A Extract Organisation Audit is updated with identifier {{ param }}",
+            "deleted": "A Extract Organisation Audit is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Extract Organisation Audit {{ id }}?"
+            },
+            "detail": {
+                "title": "Extract Organisation Audit"
+            },
+            "createdDate": "Created Date",
+            "success": "Success",
+            "organisation": "Organisation",
+            "extractConfig": "Extract Config",
+            "extractTables": "Extract Tables"
+        }
+    }
+}

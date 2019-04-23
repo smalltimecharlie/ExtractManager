@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="extractConfig">
+            <h2><span jhiTranslate="extractManagerApp.extractConfig.detail.title">Extract Config</span> {{extractConfig.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="extractManagerApp.extractConfig.extractname">Extractname</span></dt>
+                <dd>
+                    <span>{{extractConfig.extractname}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractConfig.type">Type</span></dt>
+                <dd>
+                    <span>{{extractConfig.type}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractConfig.requestingorg">Requestingorg</span></dt>
+                <dd>
+                    <span>{{extractConfig.requestingorg}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractConfig.active">Active</span></dt>
+                <dd>
+                    <span>{{extractConfig.active}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractConfig.deleted">Deleted</span></dt>
+                <dd>
+                    <span>{{extractConfig.deleted}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractConfig.emailContact">Email Contact</span></dt>
+                <dd>
+                    <span>{{extractConfig.emailContact}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractConfig.createdDate">Created Date</span></dt>
+                <dd>
+                    <span>{{extractConfig.createdDate}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/extract-config', extractConfig.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

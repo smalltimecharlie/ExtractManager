@@ -1,0 +1,83 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="extractAudit">
+            <h2><span jhiTranslate="extractManagerApp.extractAudit.detail.title">Extract Audit</span> {{extractAudit.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.extractPart">Extract Part</span></dt>
+                <dd>
+                    <span>{{extractAudit.extractPart}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.createdDate">Created Date</span></dt>
+                <dd>
+                    <span>{{extractAudit.createdDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.message">Message</span></dt>
+                <dd>
+                    <span>{{extractAudit.message}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.extractStartTime">Extract Start Time</span></dt>
+                <dd>
+                    <span>{{extractAudit.extractStartTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.extractEndTime">Extract End Time</span></dt>
+                <dd>
+                    <span>{{extractAudit.extractEndTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.firstExtractPoint">First Extract Point</span></dt>
+                <dd>
+                    <span>{{extractAudit.firstExtractPoint}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.lastExtractPoint">Last Extract Point</span></dt>
+                <dd>
+                    <span>{{extractAudit.lastExtractPoint}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.outputFileName">Output File Name</span></dt>
+                <dd>
+                    <span>{{extractAudit.outputFileName}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.recordCount">Record Count</span></dt>
+                <dd>
+                    <span>{{extractAudit.recordCount}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.fileSize">File Size</span></dt>
+                <dd>
+                    <span>{{extractAudit.fileSize}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.airflowUrl">Airflow Url</span></dt>
+                <dd>
+                    <span>{{extractAudit.airflowUrl}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.success">Success</span></dt>
+                <dd>
+                    <span>{{extractAudit.success}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.extractConfig">Extract Config</span></dt>
+                <dd>
+                    <div *ngIf="extractAudit.extractConfig">
+                        <a [routerLink]="['/extract-config', extractAudit.extractConfig?.id, 'view']">{{extractAudit.extractConfig?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractAudit.extractTables">Extract Tables</span></dt>
+                <dd>
+                    <div *ngIf="extractAudit.extractTables">
+                        <a [routerLink]="['/extract-tables', extractAudit.extractTables?.id, 'view']">{{extractAudit.extractTables?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/extract-audit', extractAudit.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="extractManagerApp.extractAudit.home.title">Extract Audits</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-extract-audit" [routerLink]="['/extract-audit/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="extractManagerApp.extractAudit.home.createLabel">
+            Create new Extract Audit
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="extractAudits">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.extractPart">Extract Part</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.createdDate">Created Date</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.message">Message</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.extractStartTime">Extract Start Time</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.extractEndTime">Extract End Time</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.firstExtractPoint">First Extract Point</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.lastExtractPoint">Last Extract Point</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.outputFileName">Output File Name</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.recordCount">Record Count</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.fileSize">File Size</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.airflowUrl">Airflow Url</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.success">Success</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.extractConfig">Extract Config</span></th>
+            <th><span jhiTranslate="extractManagerApp.extractAudit.extractTables">Extract Tables</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let extractAudit of extractAudits ;trackBy: trackId">
+                <td><a [routerLink]="['/extract-audit', extractAudit.id, 'view' ]">{{extractAudit.id}}</a></td>
+                <td>{{extractAudit.extractPart}}</td>
+                <td>{{extractAudit.createdDate | date:'medium'}}</td>
+                <td>{{extractAudit.message}}</td>
+                <td>{{extractAudit.extractStartTime}}</td>
+                <td>{{extractAudit.extractEndTime}}</td>
+                <td>{{extractAudit.firstExtractPoint}}</td>
+                <td>{{extractAudit.lastExtractPoint}}</td>
+                <td>{{extractAudit.outputFileName}}</td>
+                <td>{{extractAudit.recordCount}}</td>
+                <td>{{extractAudit.fileSize}}</td>
+                <td>{{extractAudit.airflowUrl}}</td>
+                <td>{{extractAudit.success}}</td>
+                <td>
+                    <div *ngIf="extractAudit.extractConfig">
+                        <a [routerLink]="['../extract-config', extractAudit.extractConfig?.id, 'view' ]" >{{extractAudit.extractConfig?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="extractAudit.extractTables">
+                        <a [routerLink]="['../extract-tables', extractAudit.extractTables?.id, 'view' ]" >{{extractAudit.extractTables?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/extract-audit', extractAudit.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/extract-audit', extractAudit.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'extract-audit', { outlets: { popup: extractAudit.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

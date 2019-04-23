@@ -1,0 +1,33 @@
+{
+    "extractManagerApp": {
+        "extractParts": {
+            "home": {
+                "title": "Extract Parts",
+                "createLabel": "Create a new Extract Parts",
+                "createOrEditLabel": "Create or edit a Extract Parts"
+            },
+            "created": "A new Extract Parts is created with identifier {{ param }}",
+            "updated": "A Extract Parts is updated with identifier {{ param }}",
+            "deleted": "A Extract Parts is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Extract Parts {{ id }}?"
+            },
+            "detail": {
+                "title": "Extract Parts"
+            },
+            "extractPart": "Extract Part",
+            "retentionPeriod": "Retention Period",
+            "fileFormat": "File Format",
+            "retryCount": "Retry Count",
+            "schedule": "Schedule",
+            "fileType": "File Type",
+            "compression": "Compression",
+            "pGPCert": "P GP Cert",
+            "sFTPPubKey": "S FTP Pub Key",
+            "sFTPUsername": "S FTP Username",
+            "encryptionType": "Encryption Type",
+            "extractConfig": "Extract Config",
+            "extractTables": "Extract Tables"
+        }
+    }
+}

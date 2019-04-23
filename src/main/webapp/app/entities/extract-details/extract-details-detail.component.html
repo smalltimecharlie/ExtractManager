@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="extractDetails">
+            <h2><span jhiTranslate="extractManagerApp.extractDetails.detail.title">Extract Details</span> {{extractDetails.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="extractManagerApp.extractDetails.key">Key</span></dt>
+                <dd>
+                    <span>{{extractDetails.key}}</span>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractDetails.value">Value</span></dt>
+                <dd>
+                    <div *ngIf="extractDetails.value">
+                        <a (click)="openFile(extractDetails.valueContentType, extractDetails.value)" jhiTranslate="entity.action.open">open</a>
+                        {{extractDetails.valueContentType}}, {{byteSize(extractDetails.value)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="extractManagerApp.extractDetails.extractConfig">Extract Config</span></dt>
+                <dd>
+                    <div *ngIf="extractDetails.extractConfig">
+                        <a [routerLink]="['/extract-config', extractDetails.extractConfig?.id, 'view']">{{extractDetails.extractConfig?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/extract-details', extractDetails.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

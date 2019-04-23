@@ -1,0 +1,25 @@
+{
+    "extractManagerApp": {
+        "extractOrganisation": {
+            "home": {
+                "title": "Extract Organisations",
+                "createLabel": "Create a new Extract Organisation",
+                "createOrEditLabel": "Create or edit a Extract Organisation"
+            },
+            "created": "A new Extract Organisation is created with identifier {{ param }}",
+            "updated": "A Extract Organisation is updated with identifier {{ param }}",
+            "deleted": "A Extract Organisation is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Extract Organisation {{ id }}?"
+            },
+            "detail": {
+                "title": "Extract Organisation"
+            },
+            "organisationName": "Organisation Name",
+            "modifiedDate": "Modified Date",
+            "createdDate": "Created Date",
+            "organisation": "Organisation",
+            "extractConfig": "Extract Config"
+        }
+    }
+}
