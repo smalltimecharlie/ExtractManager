@@ -1,0 +1,32 @@
+{
+    "extractManagerApp": {
+        "extractConfig": {
+            "home": {
+                "title": "Extract Configs",
+                "createLabel": "Create a new Extract Config",
+                "createOrEditLabel": "Create or edit a Extract Config"
+            },
+            "created": "A new Extract Config is created with identifier {{ param }}",
+            "updated": "A Extract Config is updated with identifier {{ param }}",
+            "deleted": "A Extract Config is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Extract Config {{ id }}?"
+            },
+            "detail": {
+                "title": "Extract Config"
+            },
+            "extractname": "Extractname",
+            "type": "Type",
+            "requestingorg": "Requestingorg",
+            "active": "Active",
+            "deleted": "Deleted",
+            "emailContact": "Email Contact",
+            "createdDate": "Created Date",
+            "extractOrganisation": "Extract Organisation",
+            "extractParts": "Extract Parts",
+            "extractDetails": "Extract Details",
+            "extractOrganisationAudit": "Extract Organisation Audit",
+            "extractAudit": "Extract Audit"
+        }
+    }
+}

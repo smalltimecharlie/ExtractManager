@@ -1,0 +1,34 @@
+{
+    "extractManagerApp": {
+        "extractAudit": {
+            "home": {
+                "title": "Extract Audits",
+                "createLabel": "Create a new Extract Audit",
+                "createOrEditLabel": "Create or edit a Extract Audit"
+            },
+            "created": "A new Extract Audit is created with identifier {{ param }}",
+            "updated": "A Extract Audit is updated with identifier {{ param }}",
+            "deleted": "A Extract Audit is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Extract Audit {{ id }}?"
+            },
+            "detail": {
+                "title": "Extract Audit"
+            },
+            "extractPart": "Extract Part",
+            "createdDate": "Created Date",
+            "message": "Message",
+            "extractStartTime": "Extract Start Time",
+            "extractEndTime": "Extract End Time",
+            "firstExtractPoint": "First Extract Point",
+            "lastExtractPoint": "Last Extract Point",
+            "outputFileName": "Output File Name",
+            "recordCount": "Record Count",
+            "fileSize": "File Size",
+            "airflowUrl": "Airflow Url",
+            "success": "Success",
+            "extractConfig": "Extract Config",
+            "extractTables": "Extract Tables"
+        }
+    }
+}

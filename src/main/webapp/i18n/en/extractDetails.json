@@ -1,0 +1,23 @@
+{
+    "extractManagerApp": {
+        "extractDetails": {
+            "home": {
+                "title": "Extract Details",
+                "createLabel": "Create a new Extract Details",
+                "createOrEditLabel": "Create or edit a Extract Details"
+            },
+            "created": "A new Extract Details is created with identifier {{ param }}",
+            "updated": "A Extract Details is updated with identifier {{ param }}",
+            "deleted": "A Extract Details is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Extract Details {{ id }}?"
+            },
+            "detail": {
+                "title": "Extract Details"
+            },
+            "key": "Key",
+            "value": "Value",
+            "extractConfig": "Extract Config"
+        }
+    }
+}

@@ -8,6 +8,14 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "organisation": "Organisation",
+                "extractConfig": "Extract Config",
+                "extractOrganisation": "Extract Organisation",
+                "extractParts": "Extract Parts",
+                "extractDetails": "Extract Details",
+                "extractTables": "Extract Tables",
+                "extractOrganisationAudit": "Extract Organisation Audit",
+                "extractAudit": "Extract Audit",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

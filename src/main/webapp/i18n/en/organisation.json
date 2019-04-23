@@ -1,0 +1,26 @@
+{
+    "extractManagerApp": {
+        "organisation": {
+            "home": {
+                "title": "Organisations",
+                "createLabel": "Create a new Organisation",
+                "createOrEditLabel": "Create or edit a Organisation"
+            },
+            "created": "A new Organisation is created with identifier {{ param }}",
+            "updated": "A Organisation is updated with identifier {{ param }}",
+            "deleted": "A Organisation is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Organisation {{ id }}?"
+            },
+            "detail": {
+                "title": "Organisation"
+            },
+            "cDB": "C DB",
+            "organisationName": "Organisation Name",
+            "nationalPracticeCode": "National Practice Code",
+            "active": "Active",
+            "extractOrganisation": "Extract Organisation",
+            "extractOrganisationAudit": "Extract Organisation Audit"
+        }
+    }
+}
